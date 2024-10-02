@@ -1,4 +1,4 @@
-package com.rahul.bullseye
+package com.rahul.bullseye.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.rahul.bullseye.R
 
 @Composable
 fun TargetSlider(modifier: Modifier = Modifier , value: Float =0.5f , valueChanged: (Float) -> Unit) {
@@ -17,7 +18,7 @@ fun TargetSlider(modifier: Modifier = Modifier , value: Float =0.5f , valueChang
         modifier= modifier) {
 
         Text(
-            stringResource(id=R.string.Min_Value), textAlign = TextAlign.Center,
+            stringResource(id= R.string.Min_Value), textAlign = TextAlign.Center,
             modifier = Modifier.padding(start = 15.dp)
         )
 

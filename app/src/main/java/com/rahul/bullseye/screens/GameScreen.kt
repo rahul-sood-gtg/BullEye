@@ -1,29 +1,29 @@
-package com.rahul.bullseye
+package com.rahul.bullseye.screens
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
-import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.rahul.bullseye.components.GamePrompt
+import com.rahul.bullseye.R
+import com.rahul.bullseye.components.GameDetail
+import com.rahul.bullseye.components.ResultDialog
+import com.rahul.bullseye.components.TargetSlider
 import com.rahul.bullseye.ui.theme.BullsEyeTheme
 import kotlin.math.abs
 import kotlin.random.Random
@@ -55,7 +55,7 @@ fun GameScreen(){
 
 
            GamePrompt(targetValue= targetValue)
-             TargetSlider( value = sliderValue,
+            TargetSlider( value = sliderValue,
                  valueChanged = { value ->
                      sliderValue = value}
              )
@@ -67,6 +67,7 @@ fun GameScreen(){
                 Text(stringResource(R.string.btn_HitMe))
 
             }
+            GameDetail(modifier = Modifier.fillMaxWidth())
         }
         Spacer(modifier = Modifier.weight(.5f))
         if(alertIsVisible){
