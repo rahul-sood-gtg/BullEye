@@ -14,23 +14,27 @@ fun ResultDialog(
     modifier: Modifier = Modifier,
     sliderValue : Int,
     hideDialog: () -> Unit,
-    points : Int
+    points : Int,
+    dialogTitle : Int,
+    onRoundIncrement: () -> Unit
 
 ) {
     AlertDialog(
         onDismissRequest = {
             hideDialog()
+            onRoundIncrement()
         },
         confirmButton = {
             TextButton(
                 onClick = {
                     hideDialog()
+                    onRoundIncrement()
                 }
             ) {
                 Text(stringResource(id = R.string.result_dialog_button_text))
             }
         },
-        title = { Text(stringResource(id = R.string.result_dialog_title)) },
+        title = { Text(stringResource(id = dialogTitle)) },
         text = { Text(stringResource(id = R.string.result_dialog_message,sliderValue,points)) }
        // text={Text("Score hit  by you is $sliderValue")}
     )

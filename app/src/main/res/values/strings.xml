@@ -9,9 +9,20 @@
     <string name="result_dialog_message">The slider\'s value is %1$d.\n You scored %2$d in this round </string>
     <string name="result_dialog_button_text">"Awesome"</string>
     <string name="start_over">Start Over</string>
-    <string name="info">Info</string>
+    <string name="info">INFO</string>
     <string name="score_label">Score</string>
     <string name="round">Round</string>
+    <string name="alert_title_1">Perfect!!!!</string>
+    <string name="alert_title_2">Almost had it !!</string>
+    <string name="alert_title_3">Not Bad</string>
+    <string name="alert_title_4">Are you even trying</string>
+    <string name="slider_thumb_description">Slider Thumb</string>
+    <string name="background_image">Background image</string>
+    <string name="About_page_Title">About Bullseye</string>
+    <string name="back_button_text">Back</string>
+    <string name="about_title_text">🎉 Bullseye 🎉\'</string>
+    <string name="about_bullseye_text">This is Bullseye, the game where you can win points and earn fame by dragging a slider.\nYour goal is to place the slider as close as possible to the target value. The closer you are, the more points you score.\nEnjoy!</string>
+
 
 
 
